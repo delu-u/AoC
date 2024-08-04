@@ -8,7 +8,7 @@ class Day1{
     static Stopwatch time = new();
     public static void solve(string[] input){
         time.Start();
-        Console.WriteLine($"    2: {Part1(input),15} / {Part2(input),-15}  {time.Elapsed}");
+        Console.WriteLine($"    1: {Part1(input),15} / {Part2(input),-15}  {time.Elapsed}");
     }
     private static string Part1(string[] input){
         long sum = 0;
