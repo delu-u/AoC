@@ -1,7 +1,7 @@
-*\__pycache__
-*\*.exe
-*\*.sln
-*\*.csproj
-*\.vscode
-*\obj
-*\bin
+__pycache__
+*.exe
+*.sln
+*.csproj
+.vscode
+obj
+bin
