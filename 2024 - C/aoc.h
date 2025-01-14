@@ -7,5 +7,6 @@
 #include <math.h>
 
 void day1(char* file, int len);
+void day2(char* file, int len);
 
 #endif
