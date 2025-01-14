@@ -1,4 +1,4 @@
-import { Day1 } from "./1.js";
+import { Day1 } from "./day1.js";
 import fs from "node:fs";
 
 const start = performance.now();
