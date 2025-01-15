@@ -16,27 +16,27 @@ def Part1(input: list[str]) -> str:
     return str(abs(ns)+abs(ew))
         
 def Part2(input: list[str]) -> str:
+    vis = [(0,0)]
     dir = 0
     ns, ew = 0, 0
-    vis = []
+    for i in range(0):continue
     for i in input:
         if i[0] == "R":
             dir = (dir + 1) %4
-            for j in range(min(ns, ns + dirs[dir][0]*int(i[1:])), max(ns, ns + dirs[dir][0]*int(i[1:]))+1):
-                if(j, ew)not in vis:
-                    vis.append((j,ew))
-                else:
-                    return str(abs(j)+abs(ew))
-            ns += dirs[dir][0]*int(i[1:])
         else: 
             dir -= 1
             if dir < 0: dir = 3
-            for j in range(min(ew, ew + dirs[dir][1]*int(i[1:])), max(ew, ew + dirs[dir][1]*int(i[1:]))+1):
-                if(ns, j)not in vis:
-                    vis.append((ns,j))
-                else:
-                    return str(abs(ns)+abs(j))
-            ew += dirs[dir][1]*int(i[1:])
+        for _ in range(abs(dirs[dir][0]*int(i[1:]))):
+            ns += dirs[dir][0]
+            if (ns,ew) in vis:
+                return str(abs(ns)+abs(ew))
+            else: vis.append((ns,ew))
+        for _ in range(abs(dirs[dir][1]*int(i[1:]))):
+            ew += dirs[dir][1]
+            if (ns,ew) in vis:
+                return str(abs(ns)+abs(ew))
+            else: vis.append((ns,ew))
+    return str(abs(ns)+abs(ew))
 
     
 @staticmethod
