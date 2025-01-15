@@ -13,5 +13,6 @@
 using namespace std::chrono;
 
 void day1(std::ifstream file);
+void day2(std::ifstream file);
 
 #endif
